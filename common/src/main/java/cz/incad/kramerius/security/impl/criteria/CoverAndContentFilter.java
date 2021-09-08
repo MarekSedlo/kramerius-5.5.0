@@ -39,6 +39,7 @@ public class CoverAndContentFilter extends AbstractCriterium implements RightCri
             FedoraAccess fedoraAccess = getEvaluateContext().getFedoraAccess();
             getEvaluateContext().getSolrAccess();
             String pid = getEvaluateContext().getRequestedPid();
+            System.out.println("MAREK DEBUG");
             if (!pid.equals(SpecialObjects.REPOSITORY.getPid())) {
                 if ("page".equals(fedoraAccess.getKrameriusModelName(pid))) {
                     Document mods = XMLUtils.parseDocument(
