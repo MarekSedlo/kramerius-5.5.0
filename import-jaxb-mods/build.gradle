@@ -1,0 +1,20 @@
+apply plugin: 'jaxb'
+
+description "Import JAXB stubs - MODS metadata"
+
+jaxbconf {
+	packageName 'org.kramerius.mods'
+	catalog 'catalog.cat'
+}
+
+configurations {
+    xjc
+}
+
+dependencies {
+	xjc 'com.sun.xml.bind:jaxb-xjc:2.2.7'
+}
+
+clean {
+    delete "generated-src"
+}

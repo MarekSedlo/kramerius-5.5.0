@@ -1,0 +1,20 @@
+apply plugin: 'jaxb'
+
+description "Import JAXB stubs - srwdc"
+
+
+jaxbconf {
+	packageName 'org.kramerius.srwdc'
+}
+
+configurations {
+    xjc
+}
+
+dependencies {
+	xjc 'com.sun.xml.bind:jaxb-xjc:2.2.7'
+}
+
+clean {
+    delete "generated-src"
+}

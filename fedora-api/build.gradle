@@ -1,0 +1,24 @@
+description "Fedora API" 
+
+apply plugin: 'wsimport'
+
+
+/** wsimport configuration */
+wsimportconf {
+	packageName "org.fedora.api"
+}
+
+/** dependencies for wsimport */
+configurations {
+    wsimport
+}
+
+dependencies {
+    wsimport 'com.sun.xml.ws:jaxws-tools:2.2.1'
+}
+
+clean {
+    delete "generated-src"
+}
+
+
